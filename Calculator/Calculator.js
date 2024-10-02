@@ -7,7 +7,7 @@ export default function Calculator(){
     const [resistor, setResistor] = useState({
         nBands:2,
         bands:{
-            color:["NULL","NULL", "NULL","NULL"],
+            color:[null,null, null, null],
             type:["BAND", "BAND", "MULTI", "NONE"]
         }
     })
@@ -18,7 +18,7 @@ export default function Calculator(){
                 ...resistor,
                 nBands:3,
                 bands:{
-                    color:["NULL","NULL", "NULL","NULL"],
+                    color:[null,null, null, null],
                     type:["BAND","BAND","BAND","MULTI"]}
             })
         }else{
@@ -26,7 +26,7 @@ export default function Calculator(){
                 ...resistor,
                 nBands:2,
                 bands:{
-                    color:["NULL","NULL", "NULL","NULL"],
+                    color:[null,null, null, null],
                     type:["BAND","BAND","MULTI","NONE"]}
             })
         }
