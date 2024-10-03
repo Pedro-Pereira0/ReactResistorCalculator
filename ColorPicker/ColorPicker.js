@@ -8,7 +8,6 @@ export default function ColorPicker(props){
     const navigation = useNavigation();
 
     const colorList = (bandType) =>{
-        console.log(props.route.params.type);
         if(bandType === "BAND"){
             return DATABAND;
         }else{
@@ -17,7 +16,7 @@ export default function ColorPicker(props){
     }
 
     const pressHandler = (item) =>{
-        ToastAndroid.show("Color: "+item.name+", Bandvalue: "+item.bandValue+", Multiplier: "+item.multiplier, ToastAndroid.SHORT);
+        ToastAndroid.show("Color: "+item.name+", Band value: "+item.bandValue+", Multiplier: "+item.multiplier, ToastAndroid.SHORT);
     }
 
     const chooseColor = (i, colorName) =>

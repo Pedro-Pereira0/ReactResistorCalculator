@@ -10,7 +10,6 @@ export const Style = StyleSheet.create({
     },
 
     resistorContainer:{
-        //backgroundColor:'#03fafa',
         marginTop:60,
         margin:20,
         height:175,
@@ -51,4 +50,29 @@ export const Style = StyleSheet.create({
         alignItems:"center",
         justifyContent:'space-evenly',
     },
+
+    calculateButtonContainer:{
+        marginLeft:25,
+        height:100,
+        width:345,
+        //backgroundColor:'orange',
+        justifyContent:"space-evenly",
+        flexDirection:"row",
+    },
+    buttonCalc:{
+        backgroundColor:"#7077A1",
+        height:50,
+        width:125,
+        alignItems:"center",
+        justifyContent:"space-evenly",
+    },
+
+    resultView:{
+        backgroundColor: "#1e2136",
+        height:50,
+        width:125,
+        alignItems:"center",
+        justifyContent:"space-evenly",
+
+    }
 });

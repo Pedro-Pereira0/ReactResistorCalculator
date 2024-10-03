@@ -32,8 +32,17 @@ export default function Calculator(){
         }
     }
 
+    const isResistorEmpty = () =>{
+        let isEmpty = false;
+        for(let i=0; i<resistor.nBands;i++){
+            if(resistor.bands.color[i] === null){
+                isEmpty = true;
+            }
+        }
+        return isEmpty;
+    }
+
     const changeColor = (i, color)=>{
-        //todo make the setResistance change the color...
         let newArray = [...resistor.bands.color];
         newArray.splice(i,1,color);
         setResistor({
@@ -47,7 +56,7 @@ export default function Calculator(){
 
     return(
         <View style={Style.container}>
-            <Resistor changeResistorColor = {changeColor} resistor = {resistor} changeResistorType={changeResistorType}/>
+            <Resistor isResistorEmpty = {isResistorEmpty} changeResistorColor = {changeColor} resistor = {resistor} changeResistorType={changeResistorType}/>
         </View>
     );
 
