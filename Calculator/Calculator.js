@@ -1,4 +1,5 @@
 import Resistor from "./Resistor";
+import ValueToColor from "./ValueToColor";
 import React, {useState} from "react";
 import {View} from "react-native";
 import {Style} from "../Style/Style";
@@ -57,6 +58,7 @@ export default function Calculator(){
     return(
         <View style={Style.container}>
             <Resistor isResistorEmpty = {isResistorEmpty} changeResistorColor = {changeColor} resistor = {resistor} changeResistorType={changeResistorType}/>
+            <ValueToColor changeResistorColor = {changeColor} resistor = {resistor}/>
         </View>
     );
 

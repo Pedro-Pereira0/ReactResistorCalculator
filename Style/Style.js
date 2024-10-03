@@ -67,6 +67,15 @@ export const Style = StyleSheet.create({
         justifyContent:"space-evenly",
     },
 
+    buttonGetColors:{
+        backgroundColor:"#7077A1",
+        marginLeft:30,
+        height:50,
+        width:125,
+        alignItems:"center",
+        justifyContent:"space-evenly",
+    },
+
     resultView:{
         backgroundColor: "#1e2136",
         height:50,
@@ -74,5 +83,28 @@ export const Style = StyleSheet.create({
         alignItems:"center",
         justifyContent:"space-evenly",
 
-    }
+    },
+    form:{
+        padding:55,
+        width:350,
+        alignItems: "center",
+        flexDirection:"row"
+    },
+
+    textInput:{
+        color:"white",
+        height:50,
+        width:80,
+        marginRight:15,
+    },
+
+    formText:{
+        backgroundColor: "#1e2136",
+        height:50,
+        width:125,
+        alignItems:"center",
+        justifyContent:"flex-start",
+        flexDirection:"row",
+        padding:6
+    },
 });
