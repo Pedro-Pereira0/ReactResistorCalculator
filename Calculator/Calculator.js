@@ -68,7 +68,7 @@ export default function Calculator(){
     return(
         <View style={Style.container}>
             <Resistor isResistorEmpty = {isResistorEmpty} changeResistorColor = {changeColor} resistor = {resistor} changeResistorType={changeResistorType}/>
-            <ValueToColor changeResistorColor = {changeResistorColor} changeAllColors = {changeAllColors} resistor = {resistor}/>
+            <ValueToColor changeResistorColor = {changeColor} changeAllColors = {changeAllColors} resistor = {resistor}/>
         </View>
     );
 
