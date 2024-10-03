@@ -55,10 +55,20 @@ export default function Calculator(){
         });
     }
 
+    const changeAllColors = (colors)=>{
+        setResistor({
+            ...resistor,
+            bands:{
+                ...resistor.bands,
+                color:colors
+            }
+        })
+    }
+
     return(
         <View style={Style.container}>
             <Resistor isResistorEmpty = {isResistorEmpty} changeResistorColor = {changeColor} resistor = {resistor} changeResistorType={changeResistorType}/>
-            <ValueToColor changeResistorColor = {changeColor} resistor = {resistor}/>
+            <ValueToColor changeResistorColor = {changeResistorColor} changeAllColors = {changeAllColors} resistor = {resistor}/>
         </View>
     );
 

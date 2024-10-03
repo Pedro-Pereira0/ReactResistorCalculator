@@ -18,7 +18,7 @@ export const colorToValue = (resistor) =>{
     return finalResult;
 }
 
-export const valueToColor = (resistor, value, changeResistorColor) =>{
+export const valueToColor = (resistor, value, changeAllColors, changeResistorColor) =>{
     let bandValue = value;
     let unity = 1;
     let multiplierValue;
@@ -44,11 +44,12 @@ export const valueToColor = (resistor, value, changeResistorColor) =>{
 
     changeResistorColor(resistor.nBands,getMultiplierByValue(multiplierValue));
 
-    for(let i=0; resistor.nBands; i++)
+    for(let i=0; i<resistor.nBands; i++)
     {
         bands[i] = bandValue/unity;
-        changeResistorColor(i,getBandByValue(bands[i]));
         bandValue = bandValue%unity;
         unity = unity/10;
     }
+
+    changeAllColors(bands);
 }
