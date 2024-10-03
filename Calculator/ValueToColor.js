@@ -8,7 +8,7 @@ export default function ValueToColor(props){
 
     const getColors = (value) =>{
         //Not working
-        valueToColor(props.resistor, value, props.changeAllColors, props.changeResistorColor);
+        valueToColor(props.resistor, value, props.changeAllColors);
     }
 
     return(

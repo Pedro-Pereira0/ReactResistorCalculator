@@ -18,7 +18,7 @@ export const colorToValue = (resistor) =>{
     return finalResult;
 }
 
-export const valueToColor = (resistor, value, changeAllColors, changeResistorColor) =>{
+export const valueToColor = (resistor, value, changeAllColors) =>{
     let bandValue = value;
     let unity = 1;
     let multiplierValue;
