@@ -45,10 +45,15 @@ export const valueToColor = (resistor, value, changeAllColors) =>{
 
     for(let i=0; i<resistor.nBands; i++)
     {
-        bands[i] = Math.trunc(bandValue/unity);
+        bands[i] = Math.trunc(bandValue/Math.pow(unity,3));
         bandColor[i] = getBandByValue(bands[i]);
-        bandValue = bandValue%unity;
+        bandValue = bands[i]*10
+        bandValue = bandValue%10;
         unity = unity/10;
+        //bands[i] = Math.trunc(bandValue/unity);
+        //bandColor[i] = getBandByValue(bands[i]);
+        //bandValue = bandValue%unity;
+        //unity = unity/10;
     }
     bandColor.push(getMultiplierByValue(multiplierValue));
     changeAllColors(bandColor);
