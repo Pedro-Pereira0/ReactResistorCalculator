@@ -22,7 +22,7 @@ export const valueToColor = (resistor, value, changeAllColors) =>{
     let bandValue = value;
     let unity = 1;
     let multiplierValue;
-    let numDigits = (Math.log10(value)+1);
+    let numDigits = Math.trunc(Math.log10(value)+1);
 
     let multiplier = 0;
 
